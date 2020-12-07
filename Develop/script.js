@@ -162,6 +162,17 @@ console.log(hour)
     var colorCode4 = document.getElementById("4PMnote");
     var colorCode5 = document.getElementById("5PMnote");
 
+    colorCode9.setAttribute("class", "past textBoxWidth");
+    colorCode10.setAttribute("class", "past textBoxWidth");
+    colorCode11.setAttribute("class", "past textBoxWidth");
+    colorCode12.setAttribute("class", "past textBoxWidth");
+    colorCode1.setAttribute("class", "past textBoxWidth");
+    colorCode2.setAttribute("class", "past textBoxWidth");
+    colorCode3.setAttribute("class", "past textBoxWidth");
+    colorCode4.setAttribute("class", "past textBoxWidth");
+    colorCode5.setAttribute("class", "past textBoxWidth");
+
+
     if(hour === 9) {
         colorCode9.setAttribute("class", "present textBoxWidth");
         colorCode10.setAttribute("class", "future textBoxWidth");
