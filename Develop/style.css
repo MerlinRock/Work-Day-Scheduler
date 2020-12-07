@@ -69,9 +69,13 @@ textArea{
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+  color: black;
 }
 
 .hourSection {
   background-color: blue;
-  /* width: 2000px; */
+}
+
+.textBoxWidth {
+  width: 100%;
 }

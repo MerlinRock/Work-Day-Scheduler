@@ -147,3 +147,66 @@ function save5ToLocalStorage () {
     console.log(noteValueFor5PM);
     localStorage.setItem("note5", JSON.stringify(noteValueFor5PM));
 }
+
+var date = new Date
+// console.log(date)
+var hour = date.getHours();
+console.log(hour)
+
+    var colorCode9 = document.getElementById("9AMnote");
+    var colorCode10 = document.getElementById("10AMnote");
+    var colorCode11 = document.getElementById("11AMnote");
+    var colorCode12 = document.getElementById("12PMnote");
+    var colorCode1 = document.getElementById("1PMnote");
+    var colorCode2 = document.getElementById("2PMnote");
+    var colorCode3 = document.getElementById("3PMnote");
+    var colorCode4 = document.getElementById("4PMnote");
+    var colorCode5 = document.getElementById("5PMnote");
+
+    if(hour === 9) {
+        colorCode9.setAttribute("class", "present textBoxWidth");
+        colorCode10.setAttribute("class", "future textBoxWidth");
+        colorCode11.setAttribute("class", "future textBoxWidth");
+        colorCode12.setAttribute("class", "future textBoxWidth");
+        colorCode1.setAttribute("class", "future textBoxWidth");
+        colorCode2.setAttribute("class", "future textBoxWidth");
+        colorCode3.setAttribute("class", "future textBoxWidth");
+        colorCode4.setAttribute("class", "future textBoxWidth");
+        colorCode5.setAttribute("class", "future textBoxWidth");
+    }
+    if(hour === 10) {
+        colorCode10.setAttribute("class", "present textBoxWidth");
+        colorCode9.setAttribute("class", "past textBoxWidth");
+        colorCode11.setAttribute("class", "future textBoxWidth");
+        colorCode12.setAttribute("class", "future textBoxWidth");
+        colorCode1.setAttribute("class", "future textBoxWidth");
+        colorCode2.setAttribute("class", "future textBoxWidth");
+        colorCode3.setAttribute("class", "future textBoxWidth");
+        colorCode4.setAttribute("class", "future textBoxWidth");
+        colorCode5.setAttribute("class", "future textBoxWidth");
+    }
+    if(hour === 11) {
+        console.log("Here!!")
+        colorCode11.setAttribute("class", "present textBoxWidth");
+    }
+    if(hour === 12) {
+    console.log(hour)
+        colorCode12.setAttribute("class", "present textBoxWidth");
+    }
+    if(hour === 13) {
+        colorCode1.setAttribute("class", "present textBoxWidth");
+    }
+    if(hour === 14) {
+        colorCode2.setAttribute("class", "present textBoxWidth");
+    }
+    if(hour === 15) {
+        colorCode3.setAttribute("class", "present textBoxWidth");
+    }
+    if(hour === 16) {
+        colorCode4.setAttribute("class", "present textBoxWidth");
+    }
+    if(hour === 17) {
+        colorCode5.setAttribute("class", "present textBoxWidth");
+    }
+
+
