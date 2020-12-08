@@ -149,7 +149,6 @@ function save5ToLocalStorage () {
 }
 
 var date = new Date
-// console.log(date)
 var hour = date.getHours();
 console.log(hour)
 
@@ -175,8 +174,8 @@ console.log(hour)
         colorCode5.setAttribute("class", "future textBoxWidth");
     }
     if(hour === 10) {
-        colorCode10.setAttribute("class", "present textBoxWidth");
         colorCode9.setAttribute("class", "past textBoxWidth");
+        colorCode10.setAttribute("class", "present textBoxWidth");
         colorCode11.setAttribute("class", "future textBoxWidth");
         colorCode12.setAttribute("class", "future textBoxWidth");
         colorCode1.setAttribute("class", "future textBoxWidth");
@@ -186,12 +185,27 @@ console.log(hour)
         colorCode5.setAttribute("class", "future textBoxWidth");
     }
     if(hour === 11) {
-        console.log("Here!!")
+        colorCode9.setAttribute("class", "past textBoxWidth");
+        colorCode10.setAttribute("class", "past textBoxWidth");
         colorCode11.setAttribute("class", "present textBoxWidth");
+        colorCode12.setAttribute("class", "future textBoxWidth");
+        colorCode1.setAttribute("class", "future textBoxWidth");
+        colorCode2.setAttribute("class", "future textBoxWidth");
+        colorCode3.setAttribute("class", "future textBoxWidth");
+        colorCode4.setAttribute("class", "future textBoxWidth");
+        colorCode5.setAttribute("class", "future textBoxWidth");
     }
     if(hour === 12) {
-    console.log(hour)
+        colorCode9.setAttribute("class", "past textBoxWidth");
+        colorCode10.setAttribute("class", "past textBoxWidth");
+        colorCode11.setAttribute("class", "past textBoxWidth");
         colorCode12.setAttribute("class", "present textBoxWidth");
+        colorCode1.setAttribute("class", "future textBoxWidth");
+        colorCode2.setAttribute("class", "future textBoxWidth");
+        colorCode3.setAttribute("class", "future textBoxWidth");
+        colorCode4.setAttribute("class", "future textBoxWidth");
+        colorCode5.setAttribute("class", "future textBoxWidth");
+        console.log("Here!!")
     }
     if(hour === 13) {
         colorCode1.setAttribute("class", "present textBoxWidth");
