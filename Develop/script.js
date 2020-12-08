@@ -1,7 +1,6 @@
 var currentDay = document.getElementById("currentDay");
 currentDay.textContent = "Today is " + moment().format("MMMM Do YYYY");
 
-
 var saveBtn9 = document.getElementById("save9AM");
 var saveBtn10 = document.getElementById("save10AM");
 var saveBtn11 = document.getElementById("save11AM");
@@ -11,9 +10,6 @@ var saveBtn2 = document.getElementById("save2AM");
 var saveBtn3 = document.getElementById("save3AM");
 var saveBtn4 = document.getElementById("save4AM");
 var saveBtn5 = document.getElementById("save5AM");
-
-
-
 
 var storedNote9 = JSON.parse(localStorage.getItem("note9"))
 var storedNote10 = JSON.parse(localStorage.getItem("note10"))
@@ -25,8 +21,6 @@ var storedNote3 = JSON.parse(localStorage.getItem("note3"))
 var storedNote4 = JSON.parse(localStorage.getItem("note4"))
 var storedNote5 = JSON.parse(localStorage.getItem("note5"))
 
-
-
 saveBtn9.addEventListener("click", save9ToLocalStorage);
 saveBtn10.addEventListener("click", save10ToLocalStorage);
 saveBtn11.addEventListener("click", save11ToLocalStorage);
@@ -36,7 +30,6 @@ saveBtn2.addEventListener("click", save2ToLocalStorage);
 saveBtn3.addEventListener("click", save3ToLocalStorage);
 saveBtn4.addEventListener("click", save4ToLocalStorage);
 saveBtn5.addEventListener("click", save5ToLocalStorage);
-
 
 if(storedNote9) {
     var storageInputNote9 = document.getElementById("9AMnote");
@@ -83,8 +76,6 @@ if(storedNote5) {
     storageInputNote5.value = storedNote5
 }
 
-
-    
 function save9ToLocalStorage () {
     var storageInputNote9 = document.getElementById("9AMnote");
     var noteValueFor9AM = storageInputNote9.value;
@@ -150,18 +141,116 @@ function save5ToLocalStorage () {
 
 var date = new Date
 var hour = date.getHours();
-console.log(hour)
 
-    var colorCode9 = document.getElementById("9AMnote");
-    var colorCode10 = document.getElementById("10AMnote");
-    var colorCode11 = document.getElementById("11AMnote");
-    var colorCode12 = document.getElementById("12PMnote");
-    var colorCode1 = document.getElementById("1PMnote");
-    var colorCode2 = document.getElementById("2PMnote");
-    var colorCode3 = document.getElementById("3PMnote");
-    var colorCode4 = document.getElementById("4PMnote");
-    var colorCode5 = document.getElementById("5PMnote");
+var colorCode9 = document.getElementById("9AMnote");
+var colorCode10 = document.getElementById("10AMnote");
+var colorCode11 = document.getElementById("11AMnote");
+var colorCode12 = document.getElementById("12PMnote");
+var colorCode1 = document.getElementById("1PMnote");
+var colorCode2 = document.getElementById("2PMnote");
+var colorCode3 = document.getElementById("3PMnote");
+var colorCode4 = document.getElementById("4PMnote");
+var colorCode5 = document.getElementById("5PMnote");
 
+colorCode9.setAttribute("class", "past textBoxWidth");
+colorCode10.setAttribute("class", "past textBoxWidth");
+colorCode11.setAttribute("class", "past textBoxWidth");
+colorCode12.setAttribute("class", "past textBoxWidth");
+colorCode1.setAttribute("class", "past textBoxWidth");
+colorCode2.setAttribute("class", "past textBoxWidth");
+colorCode3.setAttribute("class", "past textBoxWidth");
+colorCode4.setAttribute("class", "past textBoxWidth");
+colorCode5.setAttribute("class", "past textBoxWidth");
+
+if(hour === 9) {
+    colorCode9.setAttribute("class", "present textBoxWidth");
+    colorCode10.setAttribute("class", "future textBoxWidth");
+    colorCode11.setAttribute("class", "future textBoxWidth");
+    colorCode12.setAttribute("class", "future textBoxWidth");
+    colorCode1.setAttribute("class", "future textBoxWidth");
+    colorCode2.setAttribute("class", "future textBoxWidth");
+    colorCode3.setAttribute("class", "future textBoxWidth");
+    colorCode4.setAttribute("class", "future textBoxWidth");
+    colorCode5.setAttribute("class", "future textBoxWidth");
+}
+if(hour === 10) {
+    colorCode9.setAttribute("class", "past textBoxWidth");
+    colorCode10.setAttribute("class", "present textBoxWidth");
+    colorCode11.setAttribute("class", "future textBoxWidth");
+    colorCode12.setAttribute("class", "future textBoxWidth");
+    colorCode1.setAttribute("class", "future textBoxWidth");
+    colorCode2.setAttribute("class", "future textBoxWidth");
+    colorCode3.setAttribute("class", "future textBoxWidth");
+    colorCode4.setAttribute("class", "future textBoxWidth");
+    colorCode5.setAttribute("class", "future textBoxWidth");
+}
+if(hour === 11) {
+    colorCode9.setAttribute("class", "past textBoxWidth");
+    colorCode10.setAttribute("class", "past textBoxWidth");
+    colorCode11.setAttribute("class", "present textBoxWidth");
+    colorCode12.setAttribute("class", "future textBoxWidth");
+    colorCode1.setAttribute("class", "future textBoxWidth");
+    colorCode2.setAttribute("class", "future textBoxWidth");
+    colorCode3.setAttribute("class", "future textBoxWidth");
+    colorCode4.setAttribute("class", "future textBoxWidth");
+    colorCode5.setAttribute("class", "future textBoxWidth");
+}
+if(hour === 12) {
+    colorCode9.setAttribute("class", "past textBoxWidth");
+    colorCode10.setAttribute("class", "past textBoxWidth");
+    colorCode11.setAttribute("class", "past textBoxWidth");
+    colorCode12.setAttribute("class", "present textBoxWidth");
+    colorCode1.setAttribute("class", "future textBoxWidth");
+    colorCode2.setAttribute("class", "future textBoxWidth");
+    colorCode3.setAttribute("class", "future textBoxWidth");
+    colorCode4.setAttribute("class", "future textBoxWidth");
+    colorCode5.setAttribute("class", "future textBoxWidth");
+}
+if(hour === 13) {
+    colorCode9.setAttribute("class", "past textBoxWidth");
+    colorCode10.setAttribute("class", "past textBoxWidth");
+    colorCode11.setAttribute("class", "past textBoxWidth");
+    colorCode12.setAttribute("class", "past textBoxWidth");
+    colorCode1.setAttribute("class", "present textBoxWidth");
+    colorCode2.setAttribute("class", "future textBoxWidth");
+    colorCode3.setAttribute("class", "future textBoxWidth");
+    colorCode4.setAttribute("class", "future textBoxWidth");
+    colorCode5.setAttribute("class", "future textBoxWidth");
+}
+if(hour === 14) {
+    colorCode9.setAttribute("class", "past textBoxWidth");
+    colorCode10.setAttribute("class", "past textBoxWidth");
+    colorCode11.setAttribute("class", "past textBoxWidth");
+    colorCode12.setAttribute("class", "past textBoxWidth");
+    colorCode1.setAttribute("class", "past textBoxWidth");
+    colorCode2.setAttribute("class", "present textBoxWidth");
+    colorCode3.setAttribute("class", "future textBoxWidth");
+    colorCode4.setAttribute("class", "future textBoxWidth");
+    colorCode5.setAttribute("class", "future textBoxWidth");
+}
+if(hour === 15) {
+    colorCode9.setAttribute("class", "past textBoxWidth");
+    colorCode10.setAttribute("class", "past textBoxWidth");
+    colorCode11.setAttribute("class", "past textBoxWidth");
+    colorCode12.setAttribute("class", "past textBoxWidth");
+    colorCode1.setAttribute("class", "past textBoxWidth");
+    colorCode2.setAttribute("class", "past textBoxWidth");
+    colorCode3.setAttribute("class", "present textBoxWidth");
+    colorCode4.setAttribute("class", "future textBoxWidth");
+    colorCode5.setAttribute("class", "future textBoxWidth");
+}
+if(hour === 16) {
+    colorCode9.setAttribute("class", "past textBoxWidth");
+    colorCode10.setAttribute("class", "past textBoxWidth");
+    colorCode11.setAttribute("class", "past textBoxWidth");
+    colorCode12.setAttribute("class", "past textBoxWidth");
+    colorCode1.setAttribute("class", "past textBoxWidth");
+    colorCode2.setAttribute("class", "past textBoxWidth");
+    colorCode3.setAttribute("class", "past textBoxWidth");
+    colorCode4.setAttribute("class", "present textBoxWidth");
+    colorCode5.setAttribute("class", "future textBoxWidth");
+}
+if(hour === 17) {
     colorCode9.setAttribute("class", "past textBoxWidth");
     colorCode10.setAttribute("class", "past textBoxWidth");
     colorCode11.setAttribute("class", "past textBoxWidth");
@@ -170,107 +259,5 @@ console.log(hour)
     colorCode2.setAttribute("class", "past textBoxWidth");
     colorCode3.setAttribute("class", "past textBoxWidth");
     colorCode4.setAttribute("class", "past textBoxWidth");
-    colorCode5.setAttribute("class", "past textBoxWidth");
-
-
-    if(hour === 9) {
-        colorCode9.setAttribute("class", "present textBoxWidth");
-        colorCode10.setAttribute("class", "future textBoxWidth");
-        colorCode11.setAttribute("class", "future textBoxWidth");
-        colorCode12.setAttribute("class", "future textBoxWidth");
-        colorCode1.setAttribute("class", "future textBoxWidth");
-        colorCode2.setAttribute("class", "future textBoxWidth");
-        colorCode3.setAttribute("class", "future textBoxWidth");
-        colorCode4.setAttribute("class", "future textBoxWidth");
-        colorCode5.setAttribute("class", "future textBoxWidth");
-    }
-    if(hour === 10) {
-        colorCode9.setAttribute("class", "past textBoxWidth");
-        colorCode10.setAttribute("class", "present textBoxWidth");
-        colorCode11.setAttribute("class", "future textBoxWidth");
-        colorCode12.setAttribute("class", "future textBoxWidth");
-        colorCode1.setAttribute("class", "future textBoxWidth");
-        colorCode2.setAttribute("class", "future textBoxWidth");
-        colorCode3.setAttribute("class", "future textBoxWidth");
-        colorCode4.setAttribute("class", "future textBoxWidth");
-        colorCode5.setAttribute("class", "future textBoxWidth");
-    }
-    if(hour === 11) {
-        colorCode9.setAttribute("class", "past textBoxWidth");
-        colorCode10.setAttribute("class", "past textBoxWidth");
-        colorCode11.setAttribute("class", "present textBoxWidth");
-        colorCode12.setAttribute("class", "future textBoxWidth");
-        colorCode1.setAttribute("class", "future textBoxWidth");
-        colorCode2.setAttribute("class", "future textBoxWidth");
-        colorCode3.setAttribute("class", "future textBoxWidth");
-        colorCode4.setAttribute("class", "future textBoxWidth");
-        colorCode5.setAttribute("class", "future textBoxWidth");
-    }
-    if(hour === 12) {
-        colorCode9.setAttribute("class", "past textBoxWidth");
-        colorCode10.setAttribute("class", "past textBoxWidth");
-        colorCode11.setAttribute("class", "past textBoxWidth");
-        colorCode12.setAttribute("class", "present textBoxWidth");
-        colorCode1.setAttribute("class", "future textBoxWidth");
-        colorCode2.setAttribute("class", "future textBoxWidth");
-        colorCode3.setAttribute("class", "future textBoxWidth");
-        colorCode4.setAttribute("class", "future textBoxWidth");
-        colorCode5.setAttribute("class", "future textBoxWidth");
-    }
-    if(hour === 13) {
-        colorCode9.setAttribute("class", "past textBoxWidth");
-        colorCode10.setAttribute("class", "past textBoxWidth");
-        colorCode11.setAttribute("class", "past textBoxWidth");
-        colorCode12.setAttribute("class", "past textBoxWidth");
-        colorCode1.setAttribute("class", "present textBoxWidth");
-        colorCode2.setAttribute("class", "future textBoxWidth");
-        colorCode3.setAttribute("class", "future textBoxWidth");
-        colorCode4.setAttribute("class", "future textBoxWidth");
-        colorCode5.setAttribute("class", "future textBoxWidth");
-    }
-    if(hour === 14) {
-        colorCode9.setAttribute("class", "past textBoxWidth");
-        colorCode10.setAttribute("class", "past textBoxWidth");
-        colorCode11.setAttribute("class", "past textBoxWidth");
-        colorCode12.setAttribute("class", "past textBoxWidth");
-        colorCode1.setAttribute("class", "past textBoxWidth");
-        colorCode2.setAttribute("class", "present textBoxWidth");
-        colorCode3.setAttribute("class", "future textBoxWidth");
-        colorCode4.setAttribute("class", "future textBoxWidth");
-        colorCode5.setAttribute("class", "future textBoxWidth");
-    }
-    if(hour === 15) {
-        colorCode9.setAttribute("class", "past textBoxWidth");
-        colorCode10.setAttribute("class", "past textBoxWidth");
-        colorCode11.setAttribute("class", "past textBoxWidth");
-        colorCode12.setAttribute("class", "past textBoxWidth");
-        colorCode1.setAttribute("class", "past textBoxWidth");
-        colorCode2.setAttribute("class", "past textBoxWidth");
-        colorCode3.setAttribute("class", "present textBoxWidth");
-        colorCode4.setAttribute("class", "future textBoxWidth");
-        colorCode5.setAttribute("class", "future textBoxWidth");
-    }
-    if(hour === 16) {
-        colorCode9.setAttribute("class", "past textBoxWidth");
-        colorCode10.setAttribute("class", "past textBoxWidth");
-        colorCode11.setAttribute("class", "past textBoxWidth");
-        colorCode12.setAttribute("class", "past textBoxWidth");
-        colorCode1.setAttribute("class", "past textBoxWidth");
-        colorCode2.setAttribute("class", "past textBoxWidth");
-        colorCode3.setAttribute("class", "past textBoxWidth");
-        colorCode4.setAttribute("class", "present textBoxWidth");
-        colorCode5.setAttribute("class", "future textBoxWidth");
-    }
-    if(hour === 17) {
-        colorCode9.setAttribute("class", "past textBoxWidth");
-        colorCode10.setAttribute("class", "past textBoxWidth");
-        colorCode11.setAttribute("class", "past textBoxWidth");
-        colorCode12.setAttribute("class", "past textBoxWidth");
-        colorCode1.setAttribute("class", "past textBoxWidth");
-        colorCode2.setAttribute("class", "past textBoxWidth");
-        colorCode3.setAttribute("class", "past textBoxWidth");
-        colorCode4.setAttribute("class", "past textBoxWidth");
-        colorCode5.setAttribute("class", "present textBoxWidth");
-    }
-
-
+    colorCode5.setAttribute("class", "present textBoxWidth");
+}

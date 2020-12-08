@@ -10,11 +10,14 @@ You can find this app here: https://merlinrock.github.io/Work-Day-Scheduler/
 This app allows you to keep notes in each hour time slot. 
 
 It is color formatted to remind you where you are at in the day.
+
 Gray: in the past
-red: in the present
-green: in the future
+
+Red: in the present
+
+Green: in the future
 
 After entering a note, click the save icon on the right and your note will remain in that time slot until deleted.
-Make sure to save after you delete an note.
+Make sure to save after you delete a note.
 
 Stay organized!
